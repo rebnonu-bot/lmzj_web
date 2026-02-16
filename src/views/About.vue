@@ -703,6 +703,10 @@ const values = [
   align-items: center;
 }
 
+[data-theme="dark"] .cta-card {
+  background: linear-gradient(135deg, #1E40AF 0%, #1E3A8A 100%);
+}
+
 @media (max-width: 768px) {
   .cta-card {
     grid-template-columns: 1fr;

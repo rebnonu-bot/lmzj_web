@@ -567,6 +567,10 @@ const quickFeatures = [
   text-align: center;
 }
 
+[data-theme="dark"] .cta-card {
+  background: linear-gradient(135deg, #1E40AF 0%, #1E3A8A 100%);
+}
+
 .cta-content h2 {
   color: white;
   margin-bottom: var(--space-4);

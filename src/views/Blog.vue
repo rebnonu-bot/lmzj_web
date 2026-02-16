@@ -568,6 +568,10 @@ const subscribe = async () => {
   text-align: center;
 }
 
+[data-theme="dark"] .newsletter-card {
+  background: linear-gradient(135deg, #1E40AF 0%, #1E3A8A 100%);
+}
+
 @media (max-width: 640px) {
   .newsletter-card {
     padding: var(--space-10);

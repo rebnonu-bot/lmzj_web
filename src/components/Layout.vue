@@ -6,7 +6,6 @@
         <!-- Logo -->
         <router-link to="/" class="logo">
           <img src="https://www.gzlmzj.com/static/cweb2x_logo.png" alt="邻檬智能" class="logo-img" />
-          <span class="logo-text">邻檬智能</span>
         </router-link>
 
         <!-- 桌面导航 -->
@@ -81,7 +80,6 @@
           <div class="footer-brand">
             <div class="logo">
               <img src="https://www.gzlmzj.com/static/cweb2x_logo.png" alt="邻檬智能" class="logo-img" />
-              <span class="logo-text">邻檬智能</span>
             </div>
             <p class="footer-desc">
               赣州邻檬智能科技有限公司，专注于智慧社区管理软件开发，为物业公司、业委会量身打造智慧社区运营管理体系。

@@ -39,9 +39,7 @@
               <h3 class="card-name">基础版</h3>
               <p class="card-desc">适合小型物业项目</p>
               <div class="card-price">
-                <span class="currency">¥</span>
-                <span class="amount">{{ isYearly ? '999' : '99' }}</span>
-                <span class="period">/{{ isYearly ? '年' : '月' }}</span>
+                <span class="amount">免费</span>
               </div>
               <p class="card-note">500户以内</p>
             </div>
@@ -68,7 +66,7 @@
               <p class="card-desc">适合中大型物业项目</p>
               <div class="card-price">
                 <span class="currency">¥</span>
-                <span class="amount">{{ isYearly ? '2999' : '299' }}</span>
+                <span class="amount">{{ isYearly ? '1990' : '199' }}</span>
                 <span class="period">/{{ isYearly ? '年' : '月' }}</span>
               </div>
               <p class="card-note">不限户数</p>

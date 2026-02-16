@@ -1,88 +1,84 @@
 <template>
-  <div class="about-page">
-    <!-- Hero -->
-    <section class="hero-sm">
+  <div class="about">
+    <!-- Hero Section -->
+    <section class="about-hero">
       <div class="container">
-        <span class="overline">关于我们</span>
-        <h1 class="heading-hero">用技术改变世界</h1>
-        <p class="hero-desc">
-          我们是一群热爱技术的创造者，致力于为企业提供最好的数字化解决方案
-        </p>
-      </div>
-    </section>
-
-    <!-- Mission -->
-    <section class="mission section-padding">
-      <div class="container">
-        <div class="mission-grid">
-          <div class="mission-content">
-            <h2 class="heading-section">我们的使命</h2>
-            <p class="mission-text">
-              在数字化转型的浪潮中，我们相信技术应该服务于人，而不是让人适应技术。
-              我们的使命是让每一家企业都能轻松获得顶级的技术能力，无论规模大小。
-            </p>
-            <p class="mission-text">
-              通过持续创新和极致的用户体验，我们帮助企业提升效率、降低成本、创造价值。
-            </p>
-            <div class="mission-values">
-              <div class="value-item" v-for="(value, index) in values" :key="index">
-                <div class="value-icon">{{ value.icon }}</div>
-                <h4>{{ value.title }}</h4>
-                <p>{{ value.desc }}</p>
-              </div>
-            </div>
-          </div>
-          <div class="mission-visual">
-            <div class="mission-image">
-              <div class="image-placeholder">
-                <span>团队照片</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Stats -->
-    <section class="stats section-padding gradient-bg">
-      <div class="container">
-        <div class="stats-grid">
-          <div class="stat-box" v-for="(stat, index) in stats" :key="index">
-            <span class="stat-number-lg">{{ stat.number }}</span>
-            <span class="stat-label-lg">{{ stat.label }}</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Team -->
-    <section class="team section-padding">
-      <div class="container">
-        <div class="section-header">
-          <span class="overline">核心团队</span>
-          <h2 class="heading-section">认识我们的团队</h2>
-          <p class="section-desc">
-            来自全球顶尖科技公司的行业专家
+        <div class="hero-content">
+          <span class="overline">关于我们</span>
+          <h1 class="heading-hero">让物业管理更简单<br/>让业主生活更便捷</h1>
+          <p class="hero-subtitle">
+            赣州邻檬智能科技有限公司，专注于智慧社区管理软件开发，
+            为物业公司、业委会量身打造智慧社区运营管理体系
           </p>
         </div>
-        <div class="team-grid">
-          <div class="team-card" v-for="(member, index) in team" :key="index">
-            <div class="member-avatar">{{ member.name.charAt(0) }}</div>
-            <h3 class="member-name">{{ member.name }}</h3>
-            <span class="member-role">{{ member.role }}</span>
-            <p class="member-bio">{{ member.bio }}</p>
-            <div class="member-social">
-              <a href="#" title="LinkedIn">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                </svg>
-              </a>
-              <a href="#" title="Twitter">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
-                </svg>
-              </a>
+      </div>
+      <div class="hero-bg">
+        <div class="gradient-orb orb-1"></div>
+        <div class="gradient-orb orb-2"></div>
+      </div>
+    </section>
+
+    <!-- Company Intro -->
+    <section class="company-intro section-padding">
+      <div class="container">
+        <div class="intro-grid">
+          <div class="intro-content">
+            <h2 class="heading-section">公司简介</h2>
+            <p class="intro-text">
+              赣州邻檬智能科技有限公司是一家专注于智慧社区管理系统开发的科技公司。我们致力于通过技术创新，帮助物业管理企业实现数字化转型，提升管理效率和服务质量。
+            </p>
+            <p class="intro-text">
+              我们的产品覆盖小区日常管理的全部场景，包括收费管理、业主服务、智能出入、电子投票、业委会管理等多个模块，真正做到"让物业管理更简单，让业主生活更便捷"。
+            </p>
+            <p class="intro-text">
+              作为微信生态智慧社区小程序开发的领跑者，我们是企业微信官方服务商，与专业律师团队合作，确保产品合规合法，为物业公司、业委会提供安全、可靠、高效的信息化解决方案。
+            </p>
+          </div>
+          <div class="intro-stats">
+            <div class="stat-card">
+              <span class="stat-number">10,000+</span>
+              <span class="stat-label">服务小区</span>
             </div>
+            <div class="stat-card">
+              <span class="stat-number">500万+</span>
+              <span class="stat-label">覆盖业主</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">50+</span>
+              <span class="stat-label">城市覆盖</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">99.9%</span>
+              <span class="stat-label">系统稳定性</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Advantages -->
+    <section class="advantages-section section-padding gradient-bg">
+      <div class="container">
+        <div class="section-header">
+          <span class="overline">核心优势</span>
+          <h2 class="heading-section">为什么选择邻檬智能</h2>
+        </div>
+        <div class="advantages-grid">
+          <div class="advantage-card" v-for="(item, index) in advantages" :key="index">
+            <div class="advantage-icon" :style="{ background: item.gradient }">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                <path v-if="item.icon === 'team'" d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                <circle v-if="item.icon === 'team'" cx="9" cy="7" r="4"/>
+                <path v-if="item.icon === 'team'" d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+                <path v-if="item.icon === 'tech'" d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                <path v-if="item.icon === 'service'" d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                <polyline v-if="item.icon === 'service'" points="22 4 12 14.01 9 11.01"/>
+                <rect v-if="item.icon === 'security'" x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                <path v-if="item.icon === 'security'" d="M7 11V7a5 5 0 0 1 10 0v4"/>
+              </svg>
+            </div>
+            <h3 class="heading-card">{{ item.title }}</h3>
+            <p>{{ item.description }}</p>
           </div>
         </div>
       </div>
@@ -96,9 +92,10 @@
           <h2 class="heading-section">我们的成长之路</h2>
         </div>
         <div class="timeline">
-          <div class="timeline-item" v-for="(item, index) in timeline" :key="index">
-            <div class="timeline-year">{{ item.year }}</div>
+          <div class="timeline-item" v-for="(item, index) in milestones" :key="index">
+            <div class="timeline-dot"></div>
             <div class="timeline-content">
+              <span class="timeline-year">{{ item.year }}</span>
               <h3>{{ item.title }}</h3>
               <p>{{ item.description }}</p>
             </div>
@@ -108,38 +105,53 @@
     </section>
 
     <!-- Partners -->
-    <section class="partners section-padding gradient-bg">
+    <section class="partners-section section-padding">
       <div class="container">
         <div class="section-header">
           <span class="overline">合作伙伴</span>
-          <h2 class="heading-section">他们信任我们</h2>
+          <h2 class="heading-section">受到众多企业信赖</h2>
         </div>
         <div class="partners-grid">
-          <div class="partner-logo" v-for="i in 6" :key="i">
-            <div class="logo-placeholder">Partner {{ i }}</div>
+          <div class="partner-card" v-for="(partner, index) in partners" :key="index">
+            <div class="partner-logo">{{ partner.name.charAt(0) }}</div>
+            <span class="partner-name">{{ partner.name }}</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Join Us CTA -->
-    <section class="join-cta section-padding">
+    <!-- Values -->
+    <section class="values-section section-padding gradient-bg">
       <div class="container">
-        <div class="join-card">
-          <div class="join-content">
-            <h2 class="heading-section">加入我们</h2>
-            <p class="join-desc">
-              我们正在寻找优秀的技术人才加入团队。
-              如果你也热爱技术，渴望创造影响，欢迎加入我们！
-            </p>
-            <div class="join-buttons">
-              <a href="#" class="btn btn-primary btn-large">
-                查看职位
+        <div class="section-header">
+          <span class="overline">企业文化</span>
+          <h2 class="heading-section">我们的价值观</h2>
+        </div>
+        <div class="values-grid">
+          <div class="value-card" v-for="(value, index) in values" :key="index">
+            <span class="value-number">0{{ index + 1 }}</span>
+            <h3>{{ value.title }}</h3>
+            <p>{{ value.description }}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+      <div class="container">
+        <div class="cta-card">
+          <div class="cta-content">
+            <h2 class="heading-section">准备好开启智慧社区管理了吗？</h2>
+            <p class="cta-desc">立即免费试用，体验全新的物业管理方式</p>
+            <div class="cta-buttons">
+              <router-link to="/contact" class="btn btn-primary btn-large">
+                免费试用
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <path d="M5 12h14M12 5l7 7-7 7"/>
                 </svg>
-              </a>
-              <router-link to="/contact" class="btn btn-secondary btn-large">
+              </router-link>
+              <router-link to="/contact" class="btn btn-ghost btn-large">
                 联系我们
               </router-link>
             </div>
@@ -151,469 +163,593 @@
 </template>
 
 <script setup>
-const values = [
-  { icon: '🚀', title: '创新驱动', desc: '持续创新，追求卓越' },
-  { icon: '🤝', title: '客户至上', desc: '以客户需求为中心' },
-  { icon: '💡', title: '开放透明', desc: '开放沟通，透明协作' },
-  { icon: '🌱', title: '持续成长', desc: '终身学习，不断进步' }
-];
-
-const stats = [
-  { number: '2018', label: '成立年份' },
-  { number: '200+', label: '员工人数' },
-  { number: '10K+', label: '服务客户' },
-  { number: '50+', label: '技术专利' }
-];
-
-const team = [
+const advantages = [
   {
-    name: '张伟',
-    role: 'CEO & 联合创始人',
-    bio: '前阿里巴巴技术 VP，拥有 15 年互联网技术研发和管理经验。'
+    icon: 'team',
+    title: '专业团队',
+    description: '核心团队拥有10年以上智慧社区行业经验，与专业律师团队合作，确保产品合规合法',
+    gradient: 'linear-gradient(135deg, #3B82F6 0%, #60A5FA 100%)'
   },
   {
-    name: '李娜',
-    role: 'CTO & 联合创始人',
-    bio: '前腾讯架构师，专注云计算和分布式系统，开源社区活跃贡献者。'
+    icon: 'tech',
+    title: '技术领先',
+    description: '基于微信生态深度开发，企业微信官方服务商，AI人脸识别等前沿技术应用',
+    gradient: 'linear-gradient(135deg, #8B5CF6 0%, #A78BFA 100%)'
   },
   {
-    name: '王强',
-    role: '产品 VP',
-    bio: '前字节跳动产品总监，擅长从 0 到 1 的产品设计和用户增长。'
+    icon: 'service',
+    title: '服务完善',
+    description: '0门槛部署，即注册即用，一对一客户成功服务，平均每月上新2个功能',
+    gradient: 'linear-gradient(135deg, #10B981 0%, #34D399 100%)'
   },
   {
-    name: '刘芳',
-    role: '设计 VP',
-    bio: '前 Apple 高级设计师，专注用户体验和视觉设计。'
+    icon: 'security',
+    title: '安全可靠',
+    description: '资金直达物业账户，数据加密存储，隐私保护符合国家标准，系统稳定性99.9%',
+    gradient: 'linear-gradient(135deg, #F59E0B 0%, #FBBF24 100%)'
   }
 ];
 
-const timeline = [
+const milestones = [
   {
     year: '2018',
     title: '公司成立',
-    description: '在北京中关村创立，获得天使轮融资。'
+    description: '赣州邻檬智能科技有限公司正式成立，专注于智慧社区管理软件开发'
   },
   {
     year: '2019',
     title: '产品上线',
-    description: '首个产品正式发布，获得首批 100 家企业客户。'
+    description: '首款产品正式上线，获得首批种子客户认可，服务小区突破100个'
   },
   {
     year: '2020',
-    title: 'A轮融资',
-    description: '完成 5000 万元 A 轮融资，团队扩展至 50 人。'
+    title: '功能升级',
+    description: '推出电子投票、业委会管理等功能，成为微信生态智慧社区小程序领跑者'
   },
   {
     year: '2021',
-    title: '快速扩张',
-    description: '业务覆盖全国，服务客户突破 5000 家。'
+    title: '企业微信合作',
+    description: '成为企业微信官方服务商，推出企业微信深度集成版本'
   },
   {
     year: '2022',
-    title: '技术突破',
-    description: '发布 2.0 版本，AI 功能上线，获得 50 项技术专利。'
+    title: '规模突破',
+    description: '服务小区突破5000个，覆盖业主超过200万，业务覆盖全国30+城市'
   },
   {
     year: '2023',
-    title: '国际化',
-    description: '开启海外市场，在新加坡设立亚太总部。'
+    title: '技术革新',
+    description: '引入AI人脸识别技术，推出智能硬件对接方案，服务小区突破10000个'
   },
   {
     year: '2024',
-    title: 'B轮融资',
-    description: '完成 3 亿元 B 轮融资，估值达到 30 亿元。'
+    title: '持续创新',
+    description: '持续优化产品体验，服务业主超过500万，成为行业领先的智慧社区解决方案提供商'
+  }
+];
+
+const partners = [
+  { name: '万科物业' },
+  { name: '碧桂园服务' },
+  { name: '保利物业' },
+  { name: '绿城服务' },
+  { name: '龙湖智创生活' },
+  { name: '中海物业' },
+  { name: '金地智慧服务' },
+  { name: '华润万象生活' }
+];
+
+const values = [
+  {
+    title: '客户第一',
+    description: '始终以客户需求为中心，为客户创造价值是我们的首要目标'
+  },
+  {
+    title: '技术创新',
+    description: '持续投入研发，用技术创新推动物业管理行业数字化转型'
+  },
+  {
+    title: '诚信正直',
+    description: '坚守商业道德，言行一致，建立长期信任关系'
+  },
+  {
+    title: '合作共赢',
+    description: '与合作伙伴共同成长，构建智慧社区生态体系'
   }
 ];
 </script>
 
 <style scoped>
-/* Mission Section */
-.mission {
-  padding: 80px 0;
+/* About Hero */
+.about-hero {
+  position: relative;
+  padding: 140px 0 80px;
+  background: var(--bg-secondary);
+  overflow: hidden;
 }
 
-.mission-grid {
+.hero-content {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero-subtitle {
+  font-size: 20px;
+  color: var(--text-secondary);
+  margin-top: var(--space-6);
+  line-height: 1.7;
+}
+
+/* Hero Background */
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.gradient-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.4;
+}
+
+.orb-1 {
+  width: 500px;
+  height: 500px;
+  background: linear-gradient(135deg, var(--brand-300) 0%, transparent 70%);
+  top: -200px;
+  left: -100px;
+}
+
+.orb-2 {
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(135deg, var(--green-300) 0%, transparent 70%);
+  bottom: -100px;
+  right: -100px;
+}
+
+[data-theme="dark"] .gradient-orb {
+  opacity: 0.15;
+}
+
+/* Section Padding */
+.section-padding {
+  padding: 100px 0;
+}
+
+@media (max-width: 768px) {
+  .section-padding {
+    padding: 60px 0;
+  }
+}
+
+/* Section Header */
+.section-header {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto var(--space-12);
+}
+
+/* Company Intro */
+.company-intro {
+  background: var(--bg-primary);
+}
+
+.intro-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--space-16);
-  align-items: center;
+  align-items: start;
 }
 
 @media (max-width: 1024px) {
-  .mission-grid {
+  .intro-grid {
     grid-template-columns: 1fr;
     gap: var(--space-10);
   }
 }
 
-.mission-content h2 {
+.intro-content h2 {
   margin-bottom: var(--space-6);
 }
 
-.mission-text {
-  font-size: 17px;
-  color: var(--text-secondary);
+.intro-text {
+  font-size: 16px;
   line-height: 1.8;
-  margin-bottom: var(--space-6);
+  color: var(--text-secondary);
+  margin-bottom: var(--space-4);
 }
 
-.mission-values {
+.intro-stats {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: var(--space-6);
-  margin-top: var(--space-10);
 }
 
-.value-item {
+.stat-card {
+  background: var(--bg-secondary);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8);
   text-align: center;
+  border: 1px solid var(--border-color);
 }
 
-.value-icon {
-  font-size: 32px;
-  margin-bottom: var(--space-3);
+.stat-number {
+  display: block;
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--brand-primary);
+  line-height: 1;
+  margin-bottom: var(--space-2);
 }
 
-.value-item h4 {
-  font-size: 16px;
-  font-weight: 600;
-  color: var(--text-primary);
-  margin-bottom: var(--space-1);
-}
-
-.value-item p {
+.stat-label {
   font-size: 14px;
   color: var(--text-tertiary);
 }
 
-.mission-image {
-  display: flex;
-  justify-content: center;
-}
-
-.image-placeholder {
-  width: 100%;
-  max-width: 480px;
-  aspect-ratio: 4/3;
-  background: var(--bg-tertiary);
-  border-radius: var(--radius-2xl);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--text-tertiary);
-  font-size: 18px;
-}
-
-/* Stats Section */
-.stats {
-  padding: 80px 0;
-}
-
-.stats-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: var(--space-8);
-}
-
-@media (max-width: 768px) {
-  .stats-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-.stat-box {
-  text-align: center;
-}
-
-.stat-number-lg {
-  display: block;
-  font-size: 48px;
-  font-weight: 700;
-  color: var(--text-primary);
-  line-height: 1.2;
-  margin-bottom: var(--space-2);
-}
-
-.stat-label-lg {
-  font-size: 16px;
-  color: var(--text-secondary);
-}
-
-/* Team Section */
-.team {
+/* Advantages Section */
+.advantages-section {
   background: var(--bg-secondary);
 }
 
-.team-grid {
+.advantages-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: var(--space-6);
 }
 
 @media (max-width: 1024px) {
-  .team-grid {
+  .advantages-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 640px) {
-  .team-grid {
+  .advantages-grid {
     grid-template-columns: 1fr;
   }
 }
 
-.team-card {
+.advantage-card {
   background: var(--bg-primary);
   border-radius: var(--radius-xl);
   padding: var(--space-8);
-  text-align: center;
   border: 1px solid var(--border-color);
+  text-align: center;
   transition: all var(--duration-normal);
 }
 
-.team-card:hover {
+.advantage-card:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-lg);
 }
 
-.member-avatar {
-  width: 96px;
-  height: 96px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, var(--brand-primary) 0%, var(--brand-light) 100%);
-  color: white;
-  font-size: 36px;
-  font-weight: 600;
+.advantage-icon {
+  width: 72px;
+  height: 72px;
+  border-radius: var(--radius-xl);
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto var(--space-6);
 }
 
-.member-name {
-  font-size: 20px;
-  font-weight: 600;
-  color: var(--text-primary);
-  margin-bottom: var(--space-1);
+.advantage-card h3 {
+  margin-bottom: var(--space-3);
 }
 
-.member-role {
-  display: block;
-  font-size: 14px;
-  color: var(--brand-primary);
-  font-weight: 500;
-  margin-bottom: var(--space-4);
-}
-
-.member-bio {
-  font-size: 14px;
+.advantage-card p {
+  font-size: 15px;
   color: var(--text-secondary);
   line-height: 1.6;
-  margin-bottom: var(--space-6);
-}
-
-.member-social {
-  display: flex;
-  justify-content: center;
-  gap: var(--space-3);
-}
-
-.member-social a {
-  color: var(--text-tertiary);
-  transition: color var(--duration-fast);
-}
-
-.member-social a:hover {
-  color: var(--brand-primary);
 }
 
 /* Timeline Section */
 .timeline-section {
-  padding: 80px 0;
+  background: var(--bg-primary);
 }
 
 .timeline {
+  position: relative;
   max-width: 800px;
   margin: 0 auto;
-  position: relative;
 }
 
 .timeline::before {
   content: '';
   position: absolute;
-  left: 80px;
+  left: 50%;
   top: 0;
   bottom: 0;
   width: 2px;
   background: var(--border-color);
+  transform: translateX(-50%);
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .timeline::before {
-    left: 24px;
+    left: 20px;
   }
 }
 
 .timeline-item {
-  display: flex;
-  gap: var(--space-8);
-  padding: var(--space-6) 0;
   position: relative;
+  padding: var(--space-6) 0;
+  display: flex;
+  justify-content: flex-end;
 }
 
-@media (max-width: 640px) {
-  .timeline-item {
-    gap: var(--space-4);
+.timeline-item:nth-child(even) {
+  justify-content: flex-start;
+}
+
+@media (max-width: 768px) {
+  .timeline-item,
+  .timeline-item:nth-child(even) {
+    justify-content: flex-start;
+    padding-left: 60px;
   }
 }
 
-.timeline-year {
-  width: 80px;
-  text-align: right;
-  font-size: 20px;
-  font-weight: 700;
-  color: var(--brand-primary);
-  flex-shrink: 0;
+.timeline-dot {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 16px;
+  height: 16px;
+  background: var(--brand-primary);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  border: 3px solid var(--bg-primary);
+  box-shadow: 0 0 0 3px var(--brand-200);
 }
 
-@media (max-width: 640px) {
-  .timeline-year {
-    width: 48px;
-    font-size: 16px;
+@media (max-width: 768px) {
+  .timeline-dot {
+    left: 20px;
   }
 }
 
 .timeline-content {
-  flex: 1;
-  padding-left: var(--space-8);
-  border-left: 2px solid var(--border-color);
-  position: relative;
+  width: 45%;
+  background: var(--bg-secondary);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  border: 1px solid var(--border-color);
 }
 
-.timeline-content::before {
-  content: '';
-  position: absolute;
-  left: -8px;
-  top: 4px;
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  background: var(--brand-primary);
-  border: 3px solid var(--bg-primary);
-}
-
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .timeline-content {
-    padding-left: var(--space-6);
+    width: 100%;
   }
+}
+
+.timeline-year {
+  display: inline-block;
+  background: var(--brand-100);
+  color: var(--brand-700);
+  font-size: 14px;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  margin-bottom: var(--space-3);
+}
+
+[data-theme="dark"] .timeline-year {
+  background: var(--brand-900);
+  color: var(--brand-300);
 }
 
 .timeline-content h3 {
   font-size: 18px;
   font-weight: 600;
   color: var(--text-primary);
-  margin-bottom: var(--space-1);
+  margin-bottom: var(--space-2);
 }
 
 .timeline-content p {
-  font-size: 15px;
+  font-size: 14px;
   color: var(--text-secondary);
+  line-height: 1.6;
 }
 
 /* Partners Section */
+.partners-section {
+  background: var(--bg-secondary);
+}
+
 .partners-grid {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: var(--space-6);
 }
 
 @media (max-width: 1024px) {
   .partners-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 640px) {
   .partners-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.partner-card {
+  background: var(--bg-primary);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8);
+  text-align: center;
+  border: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+  transition: all var(--duration-normal);
+}
+
+.partner-card:hover {
+  box-shadow: var(--shadow-lg);
+  border-color: var(--brand-200);
+}
+
+.partner-logo {
+  width: 64px;
+  height: 64px;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, var(--brand-primary) 0%, var(--brand-light) 100%);
+  color: white;
+  font-size: 28px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.partner-name {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+/* Values Section */
+.values-section {
+  background: var(--bg-primary);
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-6);
+}
+
+@media (max-width: 1024px) {
+  .values-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-.partner-logo {
-  aspect-ratio: 3/2;
-  background: var(--bg-primary);
-  border-radius: var(--radius-lg);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+@media (max-width: 640px) {
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.value-card {
+  background: var(--bg-secondary);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8);
   border: 1px solid var(--border-color);
+  position: relative;
+  overflow: hidden;
 }
 
-.logo-placeholder {
-  color: var(--text-tertiary);
-  font-size: 14px;
-  font-weight: 500;
+.value-number {
+  position: absolute;
+  top: var(--space-4);
+  right: var(--space-4);
+  font-size: 64px;
+  font-weight: 700;
+  color: var(--brand-100);
+  line-height: 1;
+  z-index: 0;
 }
 
-/* Join CTA */
-.join-cta {
-  padding-top: 0;
+[data-theme="dark"] .value-number {
+  color: var(--brand-900);
+  opacity: 0.5;
 }
 
-.join-card {
+.value-card h3 {
+  position: relative;
+  z-index: 1;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: var(--space-3);
+  margin-top: var(--space-4);
+}
+
+.value-card p {
+  position: relative;
+  z-index: 1;
+  font-size: 15px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* CTA Section */
+.cta-section {
+  padding: 0 0 100px;
+  background: var(--bg-secondary);
+}
+
+.cta-card {
   background: linear-gradient(135deg, var(--brand-600) 0%, var(--brand-800) 100%);
   border-radius: var(--radius-2xl);
   padding: var(--space-16);
-  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: var(--space-12);
+  align-items: center;
 }
 
-@media (max-width: 640px) {
-  .join-card {
+@media (max-width: 768px) {
+  .cta-card {
+    grid-template-columns: 1fr;
+    text-align: center;
     padding: var(--space-10);
   }
 }
 
-.join-content h2 {
+.cta-content h2 {
   color: white;
   margin-bottom: var(--space-4);
 }
 
-.join-desc {
+.cta-desc {
   color: rgba(255, 255, 255, 0.8);
   font-size: 18px;
-  max-width: 600px;
-  margin: 0 auto var(--space-8);
-  line-height: 1.7;
+  margin-bottom: var(--space-8);
 }
 
-.join-buttons {
+.cta-buttons {
   display: flex;
   gap: var(--space-4);
-  justify-content: center;
 }
 
 @media (max-width: 640px) {
-  .join-buttons {
+  .cta-buttons {
     flex-direction: column;
     align-items: center;
   }
 }
 
-.join-card .btn-primary {
+.cta-card .btn-primary {
   background: white;
   color: var(--brand-primary);
 }
 
-.join-card .btn-primary:hover {
+.cta-card .btn-primary:hover {
   background: var(--gray-100);
 }
 
-.join-card .btn-secondary {
-  border-color: rgba(255, 255, 255, 0.5);
+.cta-card .btn-ghost {
   color: white;
+  border: 2px solid rgba(255, 255, 255, 0.3);
 }
 
-.join-card .btn-secondary:hover {
+.cta-card .btn-ghost:hover {
   background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.5);
 }
 </style>

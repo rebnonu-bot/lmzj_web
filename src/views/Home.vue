@@ -5,37 +5,41 @@
       <div class="container">
         <div class="hero-content">
           <span class="overline animate-fadeIn" style="animation-delay: 0.1s;">
-            🚀 全新版本 2.0 发布
+            智慧社区管理解决方案
           </span>
           <h1 class="heading-hero animate-fadeIn" style="animation-delay: 0.2s;">
-            构建下一代<br/>
-            <span class="gradient-text">智能解决方案</span>
+            让物业管理更简单<br/>
+            <span class="gradient-text">让业主生活更便捷</span>
           </h1>
           <p class="hero-subtitle animate-fadeIn" style="animation-delay: 0.3s;">
-            我们提供领先的技术平台，帮助企业实现数字化转型，
-            <br class="hide-mobile"/>
-            提升效率，创造更大商业价值。
+            赣州邻檬智能科技，专注于智慧社区管理软件开发<br/>
+            为物业公司、业委会量身打造智慧社区运营管理体系
           </p>
           <div class="hero-cta animate-fadeIn" style="animation-delay: 0.4s;">
-            <router-link to="/product" class="btn btn-primary">
-              开始使用
+            <router-link to="/contact" class="btn btn-primary">
+              免费试用
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M5 12h14M12 5l7 7-7 7"/>
               </svg>
             </router-link>
-            <router-link to="/about" class="btn btn-secondary">
-              了解更多
+            <router-link to="/product" class="btn btn-secondary">
+              了解产品
             </router-link>
           </div>
           <div class="hero-stats animate-fadeIn" style="animation-delay: 0.5s;">
             <div class="stat-item">
-              <span class="stat-number">10K+</span>
-              <span class="stat-label">企业用户</span>
+              <span class="stat-number">10,000+</span>
+              <span class="stat-label">服务小区</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-number">500万+</span>
+              <span class="stat-label">覆盖业主</span>
             </div>
             <div class="stat-divider"></div>
             <div class="stat-item">
               <span class="stat-number">99.9%</span>
-              <span class="stat-label">服务可用性</span>
+              <span class="stat-label">系统稳定性</span>
             </div>
             <div class="stat-divider"></div>
             <div class="stat-item">
@@ -52,7 +56,7 @@
                 <span></span>
                 <span></span>
               </div>
-              <div class="window-title">Dashboard</div>
+              <div class="window-title">智慧物业管理系统</div>
             </div>
             <div class="dashboard-content">
               <div class="chart-placeholder">
@@ -82,21 +86,25 @@
       <div class="container">
         <div class="section-header">
           <span class="overline">核心功能</span>
-          <h2 class="heading-section">为什么选择我们</h2>
+          <h2 class="heading-section">全方位的智慧社区解决方案</h2>
           <p class="section-desc">
-            我们提供全方位的技术解决方案，助力企业高效发展
+            覆盖小区日常管理全部场景，降低物业服务成本，提高物业服务效率
           </p>
         </div>
         <div class="features-grid">
           <div class="feature-card" v-for="(feature, index) in features" :key="index">
             <div class="feature-icon" :style="{ background: feature.gradient }">
               <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
-                <path v-if="feature.icon === 'zap'" d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                <path v-if="feature.icon === 'dollar'" d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                <path v-if="feature.icon === 'users'" d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                <circle v-if="feature.icon === 'users'" cx="9" cy="7" r="4"/>
+                <path v-if="feature.icon === 'users'" d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
                 <path v-if="feature.icon === 'shield'" d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                <path v-if="feature.icon === 'globe'" d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm0 18a8 8 0 1 1 0-16 8 8 0 0 1 0 16z"/>
-                <path v-if="feature.icon === 'cpu'" d="M4 4h16v16H4zM9 9h6v6H9zM9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 15h3M1 9h3M1 15h3"/>
-                <path v-if="feature.icon === 'barChart'" d="M12 20V10M18 20V4M6 20v-4"/>
-                <path v-if="feature.icon === 'layers'" d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                <path v-if="feature.icon === 'vote'" d="M9 11l3 3L22 4M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+                <path v-if="feature.icon === 'building'" d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                <polyline v-if="feature.icon === 'building'" points="9,22 9,12 15,12 15,22"/>
+                <rect v-if="feature.icon === 'mobile'" x="5" y="2" width="14" height="20" rx="2" ry="2"/>
+                <line v-if="feature.icon === 'mobile'" x1="12" y1="18" x2="12.01" y2="18"/>
               </svg>
             </div>
             <h3 class="heading-card">{{ feature.title }}</h3>
@@ -112,25 +120,18 @@
       </div>
     </section>
 
-    <!-- How It Works Section -->
-    <section class="how-it-works section-padding gradient-bg">
+    <!-- Advantages Section -->
+    <section class="advantages section-padding gradient-bg">
       <div class="container">
         <div class="section-header">
-          <span class="overline">工作流程</span>
-          <h2 class="heading-section">简单三步，快速上手</h2>
+          <span class="overline">核心优势</span>
+          <h2 class="heading-section">为什么选择邻檬智能</h2>
         </div>
-        <div class="steps-grid">
-          <div class="step-card" v-for="(step, index) in steps" :key="index">
-            <div class="step-number">{{ index + 1 }}</div>
-            <div class="step-content">
-              <h3 class="heading-card">{{ step.title }}</h3>
-              <p class="step-desc">{{ step.description }}</p>
-            </div>
-            <div class="step-arrow" v-if="index < steps.length - 1">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M5 12h14M12 5l7 7-7 7"/>
-              </svg>
-            </div>
+        <div class="advantages-grid">
+          <div class="advantage-card" v-for="(item, index) in advantages" :key="index">
+            <div class="advantage-number">0{{ index + 1 }}</div>
+            <h3 class="heading-card">{{ item.title }}</h3>
+            <p class="advantage-desc">{{ item.description }}</p>
           </div>
         </div>
       </div>
@@ -168,9 +169,9 @@
       <div class="container">
         <div class="cta-card">
           <div class="cta-content">
-            <h2 class="heading-section">准备好开始了吗？</h2>
+            <h2 class="heading-section">准备好开启智慧社区管理了吗？</h2>
             <p class="cta-desc">
-              立即开始免费试用，体验全新的数字化解决方案
+              立即免费试用，体验全新的物业管理方式
             </p>
             <div class="cta-buttons">
               <router-link to="/contact" class="btn btn-primary btn-large">
@@ -179,8 +180,8 @@
                   <path d="M5 12h14M12 5l7 7-7 7"/>
                 </svg>
               </router-link>
-              <router-link to="/pricing" class="btn btn-ghost btn-large">
-                查看定价
+              <router-link to="/contact" class="btn btn-ghost btn-large">
+                联系我们
               </router-link>
             </div>
           </div>
@@ -196,73 +197,77 @@
 <script setup>
 const features = [
   {
-    icon: 'zap',
-    title: '极速性能',
-    description: '毫秒级响应速度，优化的架构确保流畅体验，让您的业务永远快人一步。',
+    icon: 'dollar',
+    title: '智能收费管理',
+    description: '物业费、水电费自动计费，多渠道缴费，欠费自动提醒，催缴效率提升80%',
     gradient: 'linear-gradient(135deg, #F59E0B 0%, #FBBF24 100%)'
   },
   {
-    icon: 'shield',
-    title: '安全可靠',
-    description: '企业级安全防护，数据加密传输，多重备份机制，保障您的数据安全。',
+    icon: 'users',
+    title: '业主服务中心',
+    description: '在线报事报修，工单全程追踪，小区公告一键推送，业主满意度实时评价',
     gradient: 'linear-gradient(135deg, #10B981 0%, #34D399 100%)'
   },
   {
-    icon: 'globe',
-    title: '全球部署',
-    description: '多地域数据中心，CDN 加速，确保全球用户都能获得最佳访问体验。',
+    icon: 'shield',
+    title: '智能出入管理',
+    description: '人脸识别门禁，访客预约/邀约系统，车牌识别道闸自动抬杆，安全便捷',
     gradient: 'linear-gradient(135deg, #3B82F6 0%, #60A5FA 100%)'
   },
   {
-    icon: 'cpu',
-    title: '智能算法',
-    description: '基于人工智能的优化算法，自动分析数据，提供智能化的业务洞察。',
+    icon: 'vote',
+    title: '电子投票表决',
+    description: '人脸核身身份验证，线上线下投票结合，自动计票，结果公正透明',
     gradient: 'linear-gradient(135deg, #8B5CF6 0%, #A78BFA 100%)'
   },
   {
-    icon: 'barChart',
-    title: '数据分析',
-    description: '强大的数据可视化工具，实时监控业务指标，助力数据驱动决策。',
+    icon: 'building',
+    title: '业委会管理',
+    description: '账目收支清晰记录，按年度自动生成统计报表，线上线下账目公开透明',
     gradient: 'linear-gradient(135deg, #EC4899 0%, #F472B6 100%)'
   },
   {
-    icon: 'layers',
-    title: '灵活扩展',
-    description: '模块化架构设计，支持按需扩展，轻松应对业务增长的挑战。',
+    icon: 'mobile',
+    title: '移动办公平台',
+    description: '企业微信深度集成，待办事项实时推送，随时随地处理物业事务',
     gradient: 'linear-gradient(135deg, #06B6D4 0%, #22D3EE 100%)'
   }
 ];
 
-const steps = [
+const advantages = [
   {
-    title: '注册账号',
-    description: '只需邮箱即可快速注册，无需绑定信用卡，即刻开始体验。'
+    title: '专业团队',
+    description: '核心团队拥有10年以上智慧社区行业经验，与专业律师团队合作，确保产品合规合法'
   },
   {
-    title: '配置服务',
-    description: '根据您的业务需求，选择合适的服务套餐和功能模块。'
+    title: '技术领先',
+    description: '基于微信生态深度开发，企业微信官方服务商，AI人脸识别等前沿技术应用'
   },
   {
-    title: '上线运营',
-    description: '一键部署，快速上线，专业技术团队全程支持。'
+    title: '服务完善',
+    description: '0门槛部署，即注册即用，一对一客户成功服务，平均每月上新2个功能'
+  },
+  {
+    title: '安全可靠',
+    description: '资金直达物业账户，数据加密存储，隐私保护符合国家标准，系统稳定性99.9%'
   }
 ];
 
 const testimonials = [
   {
-    content: 'TechCorp 的解决方案帮助我们提升了 40% 的运营效率，强烈推荐给所有寻求数字化转型的企业。',
+    content: '使用邻檬智能系统后，我们的收费率从75%提升到95%，客服工作量减少了60%，业主满意度大幅提升。',
     name: '张明',
-    title: '某科技公司 CTO'
+    title: 'XX物业集团 运营总监'
   },
   {
-    content: '技术支持团队响应迅速，产品质量稳定可靠，是我们长期合作的首选伙伴。',
-    name: '李雪',
-    title: '某电商平台 产品总监'
+    content: '电子投票功能太方便了，以前纸质投票要折腾半个月，现在3天就能完成，业主参与率也高了。',
+    name: '李华',
+    title: 'XX小区 业委会主任'
   },
   {
-    content: '从 POC 到正式上线只用了两周时间，敏捷高效，完全符合我们的预期。',
+    content: '系统稳定，服务响应快，有问题随时能解决，是我们长期合作的好伙伴。',
     name: '王强',
-    title: '某金融机构 技术负责人'
+    title: 'XX物业公司 总经理'
   }
 ];
 </script>
@@ -608,60 +613,51 @@ const testimonials = [
   gap: var(--space-3);
 }
 
-/* How It Works */
-.steps-grid {
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  gap: var(--space-8);
-  flex-wrap: wrap;
-}
-
-.step-card {
-  flex: 1;
-  min-width: 280px;
-  max-width: 320px;
-  display: flex;
-  align-items: flex-start;
-  gap: var(--space-4);
-  position: relative;
-}
-
-.step-number {
-  width: 48px;
-  height: 48px;
-  border-radius: var(--radius-lg);
-  background: linear-gradient(135deg, var(--brand-primary) 0%, var(--brand-light) 100%);
-  color: white;
-  font-size: 20px;
-  font-weight: 700;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-
-.step-content h3 {
-  margin-bottom: var(--space-2);
-}
-
-.step-desc {
-  color: var(--text-secondary);
-  font-size: 15px;
-  line-height: 1.7;
-}
-
-.step-arrow {
-  color: var(--brand-300);
-  position: absolute;
-  right: -40px;
-  top: 8px;
+/* Advantages Section */
+.advantages-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-6);
 }
 
 @media (max-width: 1024px) {
-  .step-arrow {
-    display: none;
+  .advantages-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
+}
+
+@media (max-width: 640px) {
+  .advantages-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.advantage-card {
+  background: var(--bg-primary);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8);
+  border: 1px solid var(--border-color);
+  transition: all var(--duration-normal);
+}
+
+.advantage-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
+}
+
+.advantage-number {
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--brand-200);
+  line-height: 1;
+  margin-bottom: var(--space-4);
+}
+
+.advantage-desc {
+  color: var(--text-secondary);
+  font-size: 15px;
+  line-height: 1.7;
+  margin-top: var(--space-3);
 }
 
 /* Testimonials */
@@ -782,11 +778,6 @@ const testimonials = [
   }
 }
 
-.btn-large {
-  padding: 16px 32px;
-  font-size: 18px;
-}
-
 .cta-card .btn-primary {
   background: white;
   color: var(--brand-primary);
@@ -794,7 +785,6 @@ const testimonials = [
 
 .cta-card .btn-primary:hover {
   background: var(--gray-100);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 .cta-card .btn-ghost {

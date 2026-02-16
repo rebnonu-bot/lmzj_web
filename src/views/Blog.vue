@@ -149,56 +149,56 @@ const email = ref('');
 const isSubscribing = ref(false);
 const subscribeSuccess = ref(false);
 
-const categories = ['全部', '技术深度', '产品更新', '行业洞察', '最佳实践', '团队文化'];
+const categories = ['全部', '行业动态', '产品更新', '使用技巧', '政策法规', '客户案例'];
 
 const posts = [
   {
-    category: '技术深度',
+    category: '行业动态',
     date: '2024年12月10日',
-    readTime: 8,
-    title: '微服务架构的十个最佳实践',
-    excerpt: '在构建大规模分布式系统时，微服务架构成为了首选。本文总结了十年微服务实践的经验教训...',
-    author: '李明'
+    readTime: 5,
+    title: '物业管理条例修订，电子投票成亮点',
+    excerpt: '最新修订的物业管理条例明确支持电子投票方式，为业主大会召开提供便利。本文解读政策变化及对物业公司的影响...',
+    author: '政策研究团队'
   },
   {
     category: '产品更新',
     date: '2024年12月8日',
-    readTime: 5,
-    title: 'TechCorp 2.0 正式发布：AI功能全面上线',
-    excerpt: '我们很高兴地宣布 TechCorp 2.0 版本正式发布，带来了全新的 AI 助手功能和智能分析能力...',
+    readTime: 3,
+    title: '邻檬智能3.0发布：AI智能客服正式上线',
+    excerpt: '我们很高兴地宣布邻檬智能3.0版本正式发布，带来了AI智能客服、智能工单分配等多项新功能...',
     author: '产品团队'
   },
   {
-    category: '行业洞察',
+    category: '使用技巧',
     date: '2024年12月5日',
     readTime: 6,
-    title: '数字化转型：企业面临的五大挑战',
-    excerpt: '数字化转型不是简单的技术升级，而是涉及组织、流程、文化的全面变革。本文分析了企业转型中的关键挑战...',
-    author: '王芳'
+    title: '如何提高物业费收缴率？5个实用技巧',
+    excerpt: '物业费收缴是物业管理的难点之一。本文分享5个经过验证的实用技巧，帮助您将收缴率提升至95%以上...',
+    author: '客户成功团队'
   },
   {
-    category: '最佳实践',
+    category: '客户案例',
     date: '2024年12月1日',
-    readTime: 10,
-    title: '从零构建高可用系统的完整指南',
-    excerpt: '高可用系统是保障业务连续性的基础。本文详细介绍了从架构设计到运维监控的完整实践方案...',
-    author: '张伟'
+    readTime: 8,
+    title: 'XX物业：数字化转型实现降本增效30%',
+    excerpt: '通过使用邻檬智能系统，XX物业在一年内实现了管理成本降低30%，业主满意度提升至92%...',
+    author: '案例研究组'
   },
   {
-    category: '团队文化',
+    category: '政策法规',
     date: '2024年11月28日',
     readTime: 4,
-    title: '远程工作三年：我们的经验与教训',
-    excerpt: '自从实施远程工作政策以来，我们的团队效率和员工满意度都有显著提升。分享一下我们的实践经验...',
-    author: 'HR团队'
+    title: '解读：民法典对物业管理的新规定',
+    excerpt: '民法典的实施对物业管理行业产生深远影响。本文梳理了与物业相关的法律条款，帮助您合规经营...',
+    author: '法务顾问'
   },
   {
-    category: '技术深度',
+    category: '行业动态',
     date: '2024年11月25日',
-    readTime: 12,
-    title: '深入理解 React Server Components',
-    excerpt: 'React Server Components 是 React 生态的重大创新。本文深入解析其工作原理和最佳实践...',
-    author: '刘强'
+    readTime: 5,
+    title: '智慧社区建设加速，万亿市场机遇来临',
+    excerpt: '据行业报告显示，智慧社区市场规模将突破万亿。本文分析市场趋势，为物业公司把握机遇提供参考...',
+    author: '市场研究团队'
   }
 ];
 

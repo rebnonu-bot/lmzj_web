@@ -5,19 +5,8 @@
       <div class="container navbar-container">
         <!-- Logo -->
         <router-link to="/" class="logo">
-          <div class="logo-icon">
-            <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-              <rect width="32" height="32" rx="8" fill="url(#logo-gradient)"/>
-              <path d="M10 16L14 20L22 12" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-              <defs>
-                <linearGradient id="logo-gradient" x1="0" y1="0" x2="32" y2="32">
-                  <stop offset="0%" stop-color="#2563EB"/>
-                  <stop offset="100%" stop-color="#3B82F6"/>
-                </linearGradient>
-              </defs>
-            </svg>
-          </div>
-          <span class="logo-text">TechCorp</span>
+          <img src="https://www.gzlmzj.com/static/cweb2x_logo.png" alt="邻檬智能" class="logo-img" />
+          <span class="logo-text">邻檬智能</span>
         </router-link>
 
         <!-- 桌面导航 -->
@@ -48,7 +37,7 @@
 
           <!-- CTA 按钮 -->
           <router-link to="/contact" class="btn btn-primary hide-mobile">
-            联系我们
+            免费试用
           </router-link>
 
           <!-- 移动端菜单按钮 -->
@@ -74,7 +63,7 @@
           {{ item.name }}
         </router-link>
         <router-link to="/contact" class="btn btn-primary mobile-cta" @click="isMenuOpen = false">
-          联系我们
+          免费试用
         </router-link>
       </div>
     </header>
@@ -91,37 +80,26 @@
           <!-- 公司信息 -->
           <div class="footer-brand">
             <div class="logo">
-              <div class="logo-icon">
-                <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-                  <rect width="32" height="32" rx="8" fill="url(#footer-logo-gradient)"/>
-                  <path d="M10 16L14 20L22 12" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                  <defs>
-                    <linearGradient id="footer-logo-gradient" x1="0" y1="0" x2="32" y2="32">
-                      <stop offset="0%" stop-color="#2563EB"/>
-                      <stop offset="100%" stop-color="#3B82F6"/>
-                    </linearGradient>
-                  </defs>
-                </svg>
-              </div>
-              <span class="logo-text">TechCorp</span>
+              <img src="https://www.gzlmzj.com/static/cweb2x_logo.png" alt="邻檬智能" class="logo-img" />
+              <span class="logo-text">邻檬智能</span>
             </div>
             <p class="footer-desc">
-              致力于为企业提供领先的数字化解决方案，助力业务创新与增长。
+              赣州邻檬智能科技有限公司，专注于智慧社区管理软件开发，为物业公司、业委会量身打造智慧社区运营管理体系。
             </p>
             <div class="social-links">
-              <a href="#" class="social-link" title="GitHub">
+              <a href="#" class="social-link" title="微信">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                  <path d="M8.691 2.188C3.891 2.188 0 5.476 0 9.53c0 2.212 1.17 4.203 3.002 5.55a.59.59 0 0 1 .213.665l-.39 1.48c-.019.07-.048.141-.048.213 0 .163.13.295.29.295a.326.326 0 0 0 .167-.054l1.903-1.114a.864.864 0 0 1 .717-.098 10.16 10.16 0 0 0 2.837.403c.276 0 .543-.027.811-.05-.857-2.578.157-4.972 1.932-6.446 1.703-1.415 3.882-1.98 5.853-1.838-.576-3.583-4.196-6.348-8.596-6.348zM5.785 5.991c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178A1.17 1.17 0 0 1 4.623 7.17c0-.651.52-1.18 1.162-1.18zm5.813 0c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178 1.17 1.17 0 0 1-1.162-1.178c0-.651.52-1.18 1.162-1.18zm5.34 2.867c-1.797-.052-3.746.512-5.28 1.786-1.72 1.428-2.687 3.72-1.78 6.22.942 2.453 3.666 4.229 6.884 4.229.826 0 1.622-.12 2.361-.336a.722.722 0 0 1 .598.082l1.584.926a.272.272 0 0 0 .14.047c.134 0 .24-.111.24-.247 0-.06-.023-.12-.038-.177l-.327-1.233a.582.582 0 0 1-.023-.156.49.49 0 0 1 .201-.398C23.024 18.48 24 16.82 24 14.98c0-3.21-2.931-5.837-6.656-6.088V8.89c-.135-.01-.269-.03-.407-.03zm-2.53 3.274c.535 0 .969.44.969.982a.976.976 0 0 1-.969.983.976.976 0 0 1-.969-.983c0-.542.434-.982.97-.982zm4.844 0c.535 0 .969.44.969.982a.976.976 0 0 1-.969.983.976.976 0 0 1-.969-.983c0-.542.434-.982.969-.982z"/>
                 </svg>
               </a>
-              <a href="#" class="social-link" title="Twitter">
+              <a href="#" class="social-link" title="微博">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
                 </svg>
               </a>
-              <a href="#" class="social-link" title="LinkedIn">
+              <a href="#" class="social-link" title="GitHub">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
                 </svg>
               </a>
             </div>
@@ -139,7 +117,7 @@
           <div class="footer-links">
             <h4>公司</h4>
             <router-link to="/about">关于我们</router-link>
-            <router-link to="/blog">博客</router-link>
+            <router-link to="/blog">新闻动态</router-link>
             <a href="#">加入我们</a>
             <router-link to="/contact">联系我们</router-link>
           </div>
@@ -154,7 +132,7 @@
         </div>
 
         <div class="footer-bottom">
-          <p>&copy; {{ currentYear }} TechCorp. All rights reserved.</p>
+          <p>&copy; {{ currentYear }} 赣州邻檬智能科技有限公司 版权所有 | 赣ICP备XXXXXXXX号</p>
         </div>
       </div>
     </footer>
@@ -171,10 +149,11 @@ const currentYear = new Date().getFullYear();
 
 const menuItems = [
   { name: '首页', path: '/' },
-  { name: '产品', path: '/product' },
-  { name: '定价', path: '/pricing' },
-  { name: '关于', path: '/about' },
-  { name: '博客', path: '/blog' },
+  { name: '产品功能', path: '/product' },
+  { name: '定价方案', path: '/pricing' },
+  { name: '客户案例', path: '/about' },
+  { name: '关于我们', path: '/about' },
+  { name: '联系我们', path: '/contact' },
 ];
 
 // 滚动监听
@@ -253,14 +232,13 @@ onUnmounted(() => {
   text-decoration: none;
 }
 
-.logo-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.logo-img {
+  height: 40px;
+  width: auto;
 }
 
 .logo-text {
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 700;
   color: var(--text-primary);
   letter-spacing: -0.02em;

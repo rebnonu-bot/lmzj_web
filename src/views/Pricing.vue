@@ -1,162 +1,221 @@
 <template>
-  <div class="pricing-page">
-    <!-- Hero -->
-    <section class="hero-sm">
+  <div class="pricing">
+    <!-- Hero Section -->
+    <section class="pricing-hero">
       <div class="container">
-        <span class="overline">定价方案</span>
-        <h1 class="heading-hero">简单透明的定价</h1>
-        <p class="hero-desc">
-          选择适合您的方案，随时可以升级或降级
-        </p>
-
-        <!-- Billing Toggle -->
-        <div class="billing-toggle">
-          <span :class="{ active: !isYearly }">月付</span>
-          <button class="toggle-btn" @click="isYearly = !isYearly">
-            <span class="toggle-thumb" :class="{ right: isYearly }"></span>
-          </button>
-          <span :class="{ active: isYearly }">
-            年付
-            <span class="save-badge">省20%</span>
-          </span>
+        <div class="hero-content">
+          <span class="overline">定价方案</span>
+          <h1 class="heading-hero">简单透明的定价</h1>
+          <p class="hero-subtitle">
+            选择适合您的方案，随时可以升级或降级，无隐藏费用
+          </p>
+          
+          <!-- Billing Toggle -->
+          <div class="billing-toggle">
+            <span :class="{ active: !isYearly }">月付</span>
+            <button class="toggle-btn" :class="{ yearly: isYearly }" @click="isYearly = !isYearly">
+              <span class="toggle-thumb"></span>
+            </button>
+            <span :class="{ active: isYearly }">
+              年付
+              <span class="save-badge">省17%</span>
+            </span>
+          </div>
         </div>
+      </div>
+      <div class="hero-bg">
+        <div class="gradient-orb orb-1"></div>
+        <div class="gradient-orb orb-2"></div>
       </div>
     </section>
 
     <!-- Pricing Cards -->
     <section class="pricing-cards section-padding">
       <div class="container">
-        <div class="pricing-grid">
-          <div 
-            class="pricing-card" 
-            v-for="(plan, index) in pricingPlans" 
-            :key="index"
-            :class="{ popular: plan.popular }"
-          >
-            <div v-if="plan.popular" class="popular-badge">最受欢迎</div>
-            <div class="plan-header">
-              <h3 class="plan-name">{{ plan.name }}</h3>
-              <p class="plan-desc">{{ plan.description }}</p>
-              <div class="plan-price">
-                <span class="price-symbol">¥</span>
-                <span class="price-number">{{ isYearly ? plan.yearlyPrice : plan.monthlyPrice }}</span>
-                <span class="price-unit">/{{ isYearly ? '年' : '月' }}</span>
+        <div class="cards-grid">
+          <!-- 基础版 -->
+          <div class="pricing-card">
+            <div class="card-header">
+              <h3 class="card-name">基础版</h3>
+              <p class="card-desc">适合小型物业项目</p>
+              <div class="card-price">
+                <span class="currency">¥</span>
+                <span class="amount">{{ isYearly ? '999' : '99' }}</span>
+                <span class="period">/{{ isYearly ? '年' : '月' }}</span>
+              </div>
+              <p class="card-note">500户以内</p>
+            </div>
+            <div class="card-features">
+              <div class="feature-item" v-for="(feature, index) in basicFeatures" :key="index">
+                <svg class="check" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+                <span>{{ feature }}</span>
               </div>
             </div>
-            <div class="plan-features">
-              <div class="feature-category">包含功能：</div>
-              <ul>
-                <li v-for="(feature, i) in plan.features" :key="i">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M20 6L9 17l-5-5"/>
-                  </svg>
-                  {{ feature }}
-                </li>
-              </ul>
+            <div class="card-action">
+              <router-link to="/contact" class="btn btn-secondary btn-large btn-full">
+                开始使用
+              </router-link>
             </div>
-            <div class="plan-action">
-              <button 
-                class="btn btn-large"
-                :class="plan.popular ? 'btn-primary' : 'btn-secondary'"
-              >
-                {{ plan.cta }}
-              </button>
+          </div>
+
+          <!-- 专业版 -->
+          <div class="pricing-card popular">
+            <div class="popular-badge">最受欢迎</div>
+            <div class="card-header">
+              <h3 class="card-name">专业版</h3>
+              <p class="card-desc">适合中大型物业项目</p>
+              <div class="card-price">
+                <span class="currency">¥</span>
+                <span class="amount">{{ isYearly ? '2999' : '299' }}</span>
+                <span class="period">/{{ isYearly ? '年' : '月' }}</span>
+              </div>
+              <p class="card-note">不限户数</p>
+            </div>
+            <div class="card-features">
+              <div class="feature-item" v-for="(feature, index) in proFeatures" :key="index">
+                <svg class="check" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+                <span>{{ feature }}</span>
+              </div>
+            </div>
+            <div class="card-action">
+              <router-link to="/contact" class="btn btn-primary btn-large btn-full">
+                立即升级
+              </router-link>
+            </div>
+          </div>
+
+          <!-- 企业版 -->
+          <div class="pricing-card">
+            <div class="card-header">
+              <h3 class="card-name">企业版</h3>
+              <p class="card-desc">适合大型物业集团</p>
+              <div class="card-price">
+                <span class="amount">定制</span>
+              </div>
+              <p class="card-note">根据需求报价</p>
+            </div>
+            <div class="card-features">
+              <div class="feature-item" v-for="(feature, index) in enterpriseFeatures" :key="index">
+                <svg class="check" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+                <span>{{ feature }}</span>
+              </div>
+            </div>
+            <div class="card-action">
+              <router-link to="/contact" class="btn btn-secondary btn-large btn-full">
+                联系销售
+              </router-link>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Compare Features -->
-    <section class="compare-section section-padding gradient-bg">
+    <!-- Add-ons -->
+    <section class="addons-section">
       <div class="container">
-        <div class="section-header">
-          <span class="overline">功能对比</span>
-          <h2 class="heading-section">选择适合您的方案</h2>
+        <h2 class="section-title">增值服务</h2>
+        <div class="addons-grid">
+          <div class="addon-card" v-for="(addon, index) in addons" :key="index">
+            <div class="addon-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path v-if="addon.icon === 'sms'" d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+                <path v-if="addon.icon === 'hardware'" d="M3 3h18v18H3zM12 8v8M8 12h8"/>
+                <path v-if="addon.icon === 'dev'" d="M16 18l6-6-6-6M8 6l-6 6 6 6"/>
+                <path v-if="addon.icon === 'train'" d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 16a1 1 0 1 1 1-1 1 1 0 0 1-1 1zm1-5h-2V7h2z"/>
+              </svg>
+            </div>
+            <h3>{{ addon.title }}</h3>
+            <p>{{ addon.desc }}</p>
+            <span class="addon-price">{{ addon.price }}</span>
+          </div>
         </div>
-        <div class="compare-table-wrapper">
-          <table class="compare-table">
-            <thead>
-              <tr>
-                <th>功能</th>
-                <th>基础版</th>
-                <th>专业版</th>
-                <th>企业版</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr v-for="(row, index) in compareFeatures" :key="index">
-                <td class="feature-name">{{ row.name }}</td>
-                <td>
-                  <span v-if="row.starter === true" class="check">✓</span>
-                  <span v-else-if="row.starter === false" class="cross">—</span>
-                  <span v-else>{{ row.starter }}</span>
-                </td>
-                <td>
-                  <span v-if="row.pro === true" class="check">✓</span>
-                  <span v-else-if="row.pro === false" class="cross">—</span>
-                  <span v-else>{{ row.pro }}</span>
-                </td>
-                <td>
-                  <span v-if="row.enterprise === true" class="check">✓</span>
-                  <span v-else-if="row.enterprise === false" class="cross">—</span>
-                  <span v-else>{{ row.enterprise }}</span>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+      </div>
+    </section>
+
+    <!-- Comparison Table -->
+    <section class="comparison-section section-padding">
+      <div class="container">
+        <h2 class="section-title">功能对比</h2>
+        <div class="comparison-table">
+          <div class="table-header">
+            <div class="header-cell feature-name">功能特性</div>
+            <div class="header-cell plan-name">基础版</div>
+            <div class="header-cell plan-name popular">专业版</div>
+            <div class="header-cell plan-name">企业版</div>
+          </div>
+          <div class="table-body">
+            <div class="table-row" v-for="(row, index) in comparisonRows" :key="index" :class="{ category: row.isCategory }">
+              <div class="table-cell feature-name">
+                <span v-if="row.isCategory" class="category-label">{{ row.name }}</span>
+                <span v-else>{{ row.name }}</span>
+              </div>
+              <div class="table-cell plan-value">
+                <svg v-if="row.basic === true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="check-icon">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+                <svg v-else-if="row.basic === false" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="cross-icon">
+                  <line x1="18" y1="6" x2="6" y2="18"/>
+                  <line x1="6" y1="6" x2="18" y2="18"/>
+                </svg>
+                <span v-else>{{ row.basic }}</span>
+              </div>
+              <div class="table-cell plan-value popular">
+                <svg v-if="row.pro === true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="check-icon">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+                <svg v-else-if="row.pro === false" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="cross-icon">
+                  <line x1="18" y1="6" x2="6" y2="18"/>
+                  <line x1="6" y1="6" x2="18" y2="18"/>
+                </svg>
+                <span v-else>{{ row.pro }}</span>
+              </div>
+              <div class="table-cell plan-value">
+                <svg v-if="row.enterprise === true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="check-icon">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+                <svg v-else-if="row.enterprise === false" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="cross-icon">
+                  <line x1="18" y1="6" x2="6" y2="18"/>
+                  <line x1="6" y1="6" x2="18" y2="18"/>
+                </svg>
+                <span v-else>{{ row.enterprise }}</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- FAQ -->
-    <section class="faq-section section-padding">
+    <section class="faq-section">
       <div class="container">
-        <div class="section-header">
-          <span class="overline">常见问题</span>
-          <h2 class="heading-section">关于定价的疑问</h2>
-        </div>
+        <h2 class="section-title">常见问题</h2>
         <div class="faq-grid">
-          <div class="faq-card" v-for="(faq, index) in faqs" :key="index">
-            <h3 class="faq-question-sm">{{ faq.question }}</h3>
-            <p class="faq-answer-sm">{{ faq.answer }}</p>
+          <div class="faq-item" v-for="(item, index) in faqs" :key="index">
+            <h3>{{ item.question }}</h3>
+            <p>{{ item.answer }}</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Enterprise CTA -->
-    <section class="enterprise-cta section-padding">
+    <!-- CTA -->
+    <section class="cta-section">
       <div class="container">
-        <div class="enterprise-card">
-          <div class="enterprise-content">
-            <h2 class="heading-section">需要更多定制？</h2>
-            <p class="enterprise-desc">
-              我们的企业版提供专属定制方案，包括私有化部署、专属支持、定制开发等服务。
-              联系我们的销售团队获取详细报价。
-            </p>
-            <div class="enterprise-buttons">
-              <router-link to="/contact" class="btn btn-primary btn-large">
-                联系销售
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M5 12h14M12 5l7 7-7 7"/>
-                </svg>
-              </router-link>
-              <a href="tel:400-888-8888" class="btn btn-ghost btn-large">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-                </svg>
-                400-888-8888
-              </a>
-            </div>
-          </div>
-          <div class="enterprise-visual">
-            <div class="enterprise-icon">
-              <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5">
-                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
-              </svg>
-            </div>
-          </div>
+        <div class="cta-card">
+          <h2>还有疑问？</h2>
+          <p>我们的专业团队随时为您解答，帮助您选择最适合的方案</p>
+          <router-link to="/contact" class="btn btn-primary btn-large">
+            联系我们
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </router-link>
         </div>
       </div>
     </section>
@@ -168,95 +227,142 @@ import { ref } from 'vue';
 
 const isYearly = ref(false);
 
-const pricingPlans = [
+const basicFeatures = [
+  '收费管理基础功能',
+  '业主数据管理（500户）',
+  '基础客服功能',
+  '小区公告发布',
+  '基础报表统计',
+  '邮件技术支持',
+  '手机助手基础版'
+];
+
+const proFeatures = [
+  '全部基础版功能',
+  '无限业主数量',
+  '高级工单系统',
+  '智能出入管理',
+  '电子投票表决',
+  '业委会管理模块',
+  '企业微信深度集成',
+  'API接口访问',
+  '优先技术支持',
+  '专属客户成功经理'
+];
+
+const enterpriseFeatures = [
+  '全部专业版功能',
+  '私有化部署',
+  '定制化开发',
+  '专属技术架构师',
+  'SLA服务等级协议',
+  '现场培训支持',
+  '数据迁移服务',
+  '独立服务器资源',
+  '7×24小时专属客服'
+];
+
+const addons = [
   {
-    name: '基础版',
-    description: '适合个人开发者和小型项目',
-    monthlyPrice: 99,
-    yearlyPrice: 950,
-    features: [
-      '5 个项目',
-      '10GB 存储空间',
-      '基础数据分析',
-      '邮件技术支持',
-      '社区支持',
-      '基础 API 访问'
-    ],
-    cta: '开始试用',
-    popular: false
+    icon: 'sms',
+    title: '短信包',
+    desc: '用于缴费通知、验证码等场景',
+    price: '¥0.05/条'
   },
   {
-    name: '专业版',
-    description: '适合成长中的企业团队',
-    monthlyPrice: 299,
-    yearlyPrice: 2870,
-    features: [
-      '无限项目',
-      '100GB 存储空间',
-      '高级数据分析',
-      '7x24 在线支持',
-      '优先技术支持',
-      '完整 API 访问',
-      '自定义集成',
-      '团队协作功能'
-    ],
-    cta: '立即升级',
-    popular: true
+    icon: 'hardware',
+    title: '硬件设备',
+    desc: '门禁机、道闸、摄像头等',
+    price: '按设备报价'
   },
   {
-    name: '企业版',
-    description: '适合大型企业和组织',
-    monthlyPrice: '定制',
-    yearlyPrice: '定制',
-    features: [
-      '无限项目',
-      '无限存储空间',
-      '企业级数据分析',
-      '专属客户成功经理',
-      '私有化部署选项',
-      '定制开发服务',
-      'SLA 保障',
-      '现场技术支持'
-    ],
-    cta: '联系销售',
-    popular: false
+    icon: 'dev',
+    title: '定制开发',
+    desc: '根据需求定制专属功能',
+    price: '按需求报价'
+  },
+  {
+    icon: 'train',
+    title: '培训服务',
+    desc: '上门培训，手把手教学',
+    price: '¥2000/天'
   }
 ];
 
-const compareFeatures = [
-  { name: '项目数量', starter: '5 个', pro: '无限', enterprise: '无限' },
-  { name: '存储空间', starter: '10GB', pro: '100GB', enterprise: '无限' },
-  { name: 'API 调用次数', starter: '10K/月', pro: '100K/月', enterprise: '无限' },
-  { name: '数据分析', starter: '基础', pro: '高级', enterprise: '企业级' },
-  { name: '团队协作', starter: false, pro: true, enterprise: true },
-  { name: '自定义域名', starter: false, pro: true, enterprise: true },
-  { name: '私有化部署', starter: false, pro: false, enterprise: true },
-  { name: '专属支持', starter: false, pro: false, enterprise: true },
-  { name: 'SLA 保障', starter: false, pro: '99.9%', enterprise: '99.99%' },
-  { name: '审计日志', starter: '7 天', pro: '90 天', enterprise: '永久' }
+const comparisonRows = [
+  { name: '基础功能', isCategory: true },
+  { name: '收费管理', basic: true, pro: true, enterprise: true },
+  { name: '业主数据管理', basic: '500户', pro: '无限', enterprise: '无限' },
+  { name: '工单系统', basic: '基础版', pro: '高级版', enterprise: '高级版' },
+  { name: '小区公告', basic: true, pro: true, enterprise: true },
+  { name: '报表统计', basic: '基础报表', pro: '高级报表', enterprise: '自定义报表' },
+  { name: '智能化功能', isCategory: true },
+  { name: '智能门禁', basic: false, pro: true, enterprise: true },
+  { name: '车牌识别', basic: false, pro: true, enterprise: true },
+  { name: '人脸识别', basic: false, pro: true, enterprise: true },
+  { name: '电子投票', basic: false, pro: true, enterprise: true },
+  { name: '业委会管理', basic: false, pro: true, enterprise: true },
+  { name: '集成与扩展', isCategory: true },
+  { name: '企业微信集成', basic: '基础', pro: '深度集成', enterprise: '深度集成' },
+  { name: 'API接口', basic: false, pro: true, enterprise: true },
+  { name: '私有化部署', basic: false, pro: false, enterprise: true },
+  { name: '定制开发', basic: false, pro: false, enterprise: true },
+  { name: '服务支持', isCategory: true },
+  { name: '技术支持', basic: '邮件', pro: '优先响应', enterprise: '7×24小时' },
+  { name: '客户成功经理', basic: false, pro: true, enterprise: '专属' },
+  { name: '培训服务', basic: '在线文档', pro: '视频培训', enterprise: '上门培训' }
 ];
 
 const faqs = [
   {
+    question: '可以免费试用吗？',
+    answer: '可以！我们提供14天免费试用，无需绑定信用卡，试用期内可体验专业版全部功能。'
+  },
+  {
+    question: '如何计算户数？',
+    answer: '户数指系统中录入的房产数量，一套房为一户，商铺、车位不单独计算户数。'
+  },
+  {
     question: '可以随时升级或降级吗？',
-    answer: '是的，您可以随时升级或降级您的套餐。升级立即生效，降级将在当前计费周期结束后生效。'
+    answer: '随时可以。升级后立即生效，按比例计算差价；降级在当前计费周期结束后生效。'
   },
   {
-    question: '是否提供免费试用？',
-    answer: '是的，所有套餐都提供 14 天免费试用，无需绑定信用卡。试用期间可以体验所有功能。'
+    question: '数据安全如何保障？',
+    answer: '我们采用银行级数据加密，多重备份机制，数据存储在国内合规云服务器，确保数据安全。'
   },
   {
-    question: '支持哪些支付方式？',
-    answer: '我们支持支付宝、微信支付、银行转账等多种支付方式。企业版还支持对公转账。'
+    question: '是否支持数据迁移？',
+    answer: '支持。我们提供专业的数据迁移服务，帮助您从现有系统平滑迁移至邻檬智能平台。'
   },
   {
-    question: '如何申请退款？',
-    answer: '我们提供 30 天无理由退款保证。如果您对服务不满意，可以在购买后 30 天内申请全额退款。'
+    question: '企业版如何定价？',
+    answer: '企业版根据您的具体需求（户数、功能模块、部署方式等）定制报价，请联系我们的销售团队获取方案。'
   }
 ];
 </script>
 
 <style scoped>
+/* Pricing Hero */
+.pricing-hero {
+  position: relative;
+  padding: 140px 0 60px;
+  background: var(--bg-secondary);
+  overflow: hidden;
+}
+
+.hero-content {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.hero-subtitle {
+  font-size: 18px;
+  color: var(--text-secondary);
+  margin-top: var(--space-4);
+  margin-bottom: var(--space-8);
+}
+
 /* Billing Toggle */
 .billing-toggle {
   display: flex;
@@ -278,8 +384,8 @@ const faqs = [
 
 .save-badge {
   display: inline-block;
-  background: var(--success);
-  color: white;
+  background: var(--green-100);
+  color: var(--green-700);
   font-size: 12px;
   font-weight: 600;
   padding: 2px 8px;
@@ -291,66 +397,111 @@ const faqs = [
   width: 56px;
   height: 28px;
   border-radius: var(--radius-full);
-  background: var(--bg-tertiary);
+  background: var(--gray-300);
   border: none;
-  position: relative;
+  padding: 2px;
   cursor: pointer;
+  position: relative;
   transition: background var(--duration-normal);
 }
 
+.toggle-btn.yearly {
+  background: var(--brand-primary);
+}
+
 .toggle-thumb {
-  position: absolute;
-  top: 2px;
-  left: 2px;
+  display: block;
   width: 24px;
   height: 24px;
-  border-radius: 50%;
   background: white;
-  box-shadow: var(--shadow-sm);
+  border-radius: 50%;
   transition: transform var(--duration-normal);
 }
 
-.toggle-thumb.right {
+.toggle-btn.yearly .toggle-thumb {
   transform: translateX(28px);
 }
 
+/* Hero Background */
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.gradient-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.4;
+}
+
+.orb-1 {
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(135deg, var(--brand-300) 0%, transparent 70%);
+  top: -100px;
+  right: -100px;
+}
+
+.orb-2 {
+  width: 300px;
+  height: 300px;
+  background: linear-gradient(135deg, var(--green-300) 0%, transparent 70%);
+  bottom: -50px;
+  left: -50px;
+}
+
+[data-theme="dark"] .gradient-orb {
+  opacity: 0.15;
+}
+
+/* Section Padding */
+.section-padding {
+  padding: 80px 0;
+}
+
 /* Pricing Cards */
-.pricing-grid {
+.pricing-cards {
+  background: var(--bg-secondary);
+  padding-bottom: 0;
+}
+
+.cards-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: var(--space-6);
-  max-width: 1200px;
-  margin: 0 auto;
+  align-items: start;
 }
 
 @media (max-width: 1024px) {
-  .pricing-grid {
+  .cards-grid {
     grid-template-columns: 1fr;
-    max-width: 480px;
+    max-width: 500px;
+    margin: 0 auto;
   }
 }
 
 .pricing-card {
   background: var(--bg-primary);
   border-radius: var(--radius-2xl);
-  border: 2px solid var(--border-color);
   padding: var(--space-8);
+  border: 1px solid var(--border-color);
   position: relative;
   transition: all var(--duration-normal);
 }
 
 .pricing-card:hover {
-  transform: translateY(-8px);
-  box-shadow: var(--shadow-xl);
+  box-shadow: var(--shadow-lg);
 }
 
 .pricing-card.popular {
   border-color: var(--brand-primary);
-  transform: scale(1.02);
-}
-
-.pricing-card.popular:hover {
-  transform: scale(1.02) translateY(-8px);
+  box-shadow: 0 0 0 2px var(--brand-primary);
 }
 
 .popular-badge {
@@ -358,148 +509,268 @@ const faqs = [
   top: -12px;
   left: 50%;
   transform: translateX(-50%);
-  background: linear-gradient(135deg, var(--brand-primary) 0%, var(--brand-light) 100%);
+  background: var(--brand-primary);
   color: white;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 600;
-  padding: var(--space-1) var(--space-4);
+  padding: 6px 16px;
   border-radius: var(--radius-full);
 }
 
-.plan-header {
+.card-header {
   text-align: center;
   padding-bottom: var(--space-6);
   border-bottom: 1px solid var(--border-color);
   margin-bottom: var(--space-6);
 }
 
-.plan-name {
+.card-name {
   font-size: 24px;
   font-weight: 700;
   color: var(--text-primary);
   margin-bottom: var(--space-2);
 }
 
-.plan-desc {
+.card-desc {
   font-size: 14px;
   color: var(--text-tertiary);
   margin-bottom: var(--space-6);
 }
 
-.plan-price {
+.card-price {
   display: flex;
   align-items: baseline;
   justify-content: center;
-  gap: 2px;
+  gap: 4px;
 }
 
-.price-symbol {
+.card-price .currency {
   font-size: 24px;
   font-weight: 600;
   color: var(--text-primary);
 }
 
-.price-number {
+.card-price .amount {
   font-size: 48px;
   font-weight: 700;
   color: var(--text-primary);
   line-height: 1;
 }
 
-.price-unit {
+.card-price .period {
   font-size: 16px;
   color: var(--text-tertiary);
 }
 
-.feature-category {
-  font-size: 13px;
-  font-weight: 600;
+.card-note {
+  font-size: 14px;
   color: var(--text-tertiary);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  margin-bottom: var(--space-4);
+  margin-top: var(--space-2);
 }
 
-.plan-features ul {
-  list-style: none;
+.card-features {
   margin-bottom: var(--space-8);
 }
 
-.plan-features li {
+.feature-item {
   display: flex;
   align-items: center;
   gap: var(--space-3);
-  padding: var(--space-2) 0;
+  padding: var(--space-3) 0;
+  font-size: 15px;
   color: var(--text-secondary);
 }
 
-.plan-features svg {
-  color: var(--success);
+.feature-item .check {
+  color: var(--green-500);
   flex-shrink: 0;
 }
 
-.plan-action .btn {
+.card-action .btn-full {
   width: 100%;
-  justify-content: center;
+  text-align: center;
 }
 
-/* Compare Table */
-.compare-table-wrapper {
-  overflow-x: auto;
+/* Add-ons */
+.addons-section {
+  padding: 80px 0;
+  background: var(--bg-secondary);
+}
+
+.section-title {
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: var(--space-10);
+  color: var(--text-primary);
+}
+
+.addons-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-6);
+}
+
+@media (max-width: 1024px) {
+  .addons-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .addons-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.addon-card {
   background: var(--bg-primary);
   border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  text-align: center;
   border: 1px solid var(--border-color);
 }
 
-.compare-table {
-  width: 100%;
-  border-collapse: collapse;
-  min-width: 600px;
+.addon-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-lg);
+  background: var(--brand-50);
+  color: var(--brand-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--space-4);
 }
 
-.compare-table th,
-.compare-table td {
-  padding: var(--space-4) var(--space-6);
-  text-align: center;
+[data-theme="dark"] .addon-icon {
+  background: var(--brand-900);
+}
+
+.addon-card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: var(--space-2);
+}
+
+.addon-card p {
+  font-size: 14px;
+  color: var(--text-tertiary);
+  margin-bottom: var(--space-4);
+}
+
+.addon-price {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--brand-primary);
+}
+
+/* Comparison Table */
+.comparison-section {
+  background: var(--bg-primary);
+}
+
+.comparison-table {
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+}
+
+.table-header {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  background: var(--bg-tertiary);
   border-bottom: 1px solid var(--border-color);
 }
 
-.compare-table th {
-  background: var(--bg-tertiary);
+.header-cell {
+  padding: var(--space-4) var(--space-6);
   font-weight: 600;
-  color: var(--text-primary);
-  font-size: 15px;
-}
-
-.compare-table th:first-child {
-  text-align: left;
-}
-
-.compare-table td:first-child {
-  text-align: left;
-  font-weight: 500;
+  font-size: 14px;
   color: var(--text-primary);
 }
 
-.compare-table tbody tr:last-child td {
+.header-cell.feature-name {
+  text-align: left;
+}
+
+.header-cell.plan-name {
+  text-align: center;
+}
+
+.header-cell.plan-name.popular {
+  background: var(--brand-50);
+  color: var(--brand-primary);
+}
+
+[data-theme="dark"] .header-cell.plan-name.popular {
+  background: var(--brand-900);
+}
+
+.table-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.table-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.table-row:last-child {
   border-bottom: none;
 }
 
-.compare-table .check {
-  color: var(--success);
+.table-row.category {
+  background: var(--bg-tertiary);
+}
+
+.table-cell {
+  padding: var(--space-4) var(--space-6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+
+.table-cell.feature-name {
+  justify-content: flex-start;
+}
+
+.category-label {
   font-weight: 600;
+  color: var(--text-primary);
 }
 
-.compare-table .cross {
-  color: var(--text-tertiary);
+.table-cell.plan-value.popular {
+  background: var(--brand-50);
 }
 
-/* FAQ Grid */
+[data-theme="dark"] .table-cell.plan-value.popular {
+  background: var(--brand-900);
+}
+
+.check-icon {
+  color: var(--green-500);
+}
+
+.cross-icon {
+  color: var(--gray-400);
+}
+
+/* FAQ Section */
+.faq-section {
+  padding: 80px 0;
+  background: var(--bg-secondary);
+}
+
 .faq-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: var(--space-6);
-  max-width: 1000px;
+  max-width: 900px;
   margin: 0 auto;
 }
 
@@ -509,111 +780,58 @@ const faqs = [
   }
 }
 
-.faq-card {
+.faq-item {
   background: var(--bg-primary);
   border-radius: var(--radius-xl);
-  padding: var(--space-8);
+  padding: var(--space-6);
   border: 1px solid var(--border-color);
 }
 
-.faq-question-sm {
-  font-size: 18px;
+.faq-item h3 {
+  font-size: 16px;
   font-weight: 600;
   color: var(--text-primary);
   margin-bottom: var(--space-3);
 }
 
-.faq-answer-sm {
+.faq-item p {
+  font-size: 14px;
   color: var(--text-secondary);
-  line-height: 1.7;
+  line-height: 1.6;
 }
 
-/* Enterprise CTA */
-.enterprise-cta {
-  padding-top: 0;
+/* CTA Section */
+.cta-section {
+  padding: 0 0 100px;
+  background: var(--bg-secondary);
 }
 
-.enterprise-card {
-  background: linear-gradient(135deg, var(--gray-800) 0%, var(--gray-900) 100%);
+.cta-card {
+  background: linear-gradient(135deg, var(--brand-600) 0%, var(--brand-800) 100%);
   border-radius: var(--radius-2xl);
-  padding: var(--space-16);
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: var(--space-12);
-  align-items: center;
-  position: relative;
-  overflow: hidden;
+  padding: var(--space-12);
+  text-align: center;
 }
 
-@media (max-width: 768px) {
-  .enterprise-card {
-    grid-template-columns: 1fr;
-    text-align: center;
-    padding: var(--space-10);
-  }
-  
-  .enterprise-visual {
-    display: none;
-  }
-}
-
-.enterprise-content h2 {
+.cta-card h2 {
+  font-size: 32px;
+  font-weight: 700;
   color: white;
   margin-bottom: var(--space-4);
 }
 
-.enterprise-desc {
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 17px;
-  line-height: 1.7;
+.cta-card p {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.8);
   margin-bottom: var(--space-8);
 }
 
-.enterprise-buttons {
-  display: flex;
-  gap: var(--space-4);
-}
-
-@media (max-width: 640px) {
-  .enterprise-buttons {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
-.enterprise-card .btn-primary {
+.cta-card .btn-primary {
   background: white;
-  color: var(--gray-800);
+  color: var(--brand-primary);
 }
 
-.enterprise-card .btn-primary:hover {
+.cta-card .btn-primary:hover {
   background: var(--gray-100);
-}
-
-.enterprise-card .btn-ghost {
-  color: white;
-  border: 2px solid rgba(255, 255, 255, 0.3);
-}
-
-.enterprise-card .btn-ghost:hover {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: rgba(255, 255, 255, 0.5);
-}
-
-.enterprise-visual {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.enterprise-icon {
-  width: 160px;
-  height: 160px;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(20px);
-  border-radius: var(--radius-2xl);
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 </style>

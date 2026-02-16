@@ -343,12 +343,22 @@ const testimonials = [
 @media (max-width: 640px) {
   .hero-stats {
     justify-content: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    gap: var(--space-4);
+  }
+  
+  .stat-number {
+    font-size: 24px;
+  }
+  
+  .stat-label {
+    font-size: 12px;
   }
 }
 
 .stat-item {
   text-align: center;
+  white-space: nowrap;
 }
 
 .stat-number {
@@ -357,6 +367,10 @@ const testimonials = [
   font-weight: 700;
   color: var(--text-primary);
   line-height: 1.2;
+}
+
+.stat-label {
+  white-space: nowrap;
 }
 
 .stat-label {

@@ -164,6 +164,159 @@
       </div>
     </section>
 
+    <!-- Electronic Voting Solution Section -->
+    <section class="voting-solution section-padding">
+      <div class="container">
+        <div class="section-header">
+          <span class="overline highlight">核心解决方案</span>
+          <h2 class="heading-section">电子投票表决系统</h2>
+          <p class="section-desc">
+            用技术手段解决业主投票流程不清晰、身份核验难、统计核算难等痛点<br/>
+            让小区公共事务决策更高效、更公正、更透明
+          </p>
+        </div>
+        
+        <div class="voting-showcase">
+          <div class="voting-main">
+            <div class="voting-badge">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                <path d="M9 12l2 2 4-4"/>
+              </svg>
+              公安部权威数据库核验
+            </div>
+            <h3 class="voting-title">首创人脸识别 + 公安核验<br/>双重身份验证</h3>
+            <p class="voting-desc">
+              业主投票时进行动态人脸核身比对，将身份证信息和实时视频上传至公安权威数据库验证，
+              确保投票人身份真实，投票结果具有法律效力
+            </p>
+            <div class="voting-stats">
+              <div class="voting-stat-item">
+                <span class="voting-stat-number">90%+</span>
+                <span class="voting-stat-label">投票成功率</span>
+              </div>
+              <div class="voting-stat-item">
+                <span class="voting-stat-number">7天</span>
+                <span class="voting-stat-label">最快完成周期</span>
+              </div>
+              <div class="voting-stat-item">
+                <span class="voting-stat-number">1000+</span>
+                <span class="voting-stat-label">已服务小区</span>
+              </div>
+            </div>
+            <div class="voting-cta">
+              <router-link to="/contact" class="btn btn-primary btn-large">
+                了解投票解决方案
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </router-link>
+            </div>
+          </div>
+          <div class="voting-visual">
+            <div class="phone-mockup">
+              <div class="phone-screen">
+                <div class="vote-app">
+                  <div class="vote-header">
+                    <div class="vote-back"></div>
+                    <span>投票表决</span>
+                    <div class="vote-menu"></div>
+                  </div>
+                  <div class="vote-content">
+                    <div class="vote-card">
+                      <div class="vote-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#8B5CF6" stroke-width="2">
+                          <path d="M9 11l3 3L22 4"/>
+                          <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+                        </svg>
+                      </div>
+                      <h4>小区公共收益使用方案</h4>
+                      <p>投票截止：2024-12-31</p>
+                      <div class="vote-progress">
+                        <div class="vote-progress-bar"></div>
+                        <span>参与率 68%</span>
+                      </div>
+                    </div>
+                    <div class="face-id-demo">
+                      <div class="face-ring">
+                        <div class="face-icon">
+                          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                            <circle cx="12" cy="7" r="4"/>
+                          </svg>
+                        </div>
+                      </div>
+                      <span>人脸识别验证中...</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="floating-card card-1">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                <polyline points="22 4 12 14.01 9 11.01"/>
+              </svg>
+              <span>身份核验通过</span>
+            </div>
+            <div class="floating-card card-2">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              </svg>
+              <span>数据加密传输</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="voting-features">
+          <div class="voting-feature-item">
+            <div class="voting-feature-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                <path d="M9 12l2 2 4-4"/>
+              </svg>
+            </div>
+            <h4>多种投票规则</h4>
+            <p>支持双过半、三分之二等多种表决规则，自动计算投票结果</p>
+          </div>
+          <div class="voting-feature-item">
+            <div class="voting-feature-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                <line x1="16" y1="2" x2="16" y2="6"/>
+                <line x1="8" y1="2" x2="8" y2="6"/>
+                <line x1="3" y1="10" x2="21" y2="10"/>
+              </svg>
+            </div>
+            <h4>灵活投票范围</h4>
+            <p>可按小区、楼宇、单元设置投票范围，满足不同决策需求</p>
+          </div>
+          <div class="voting-feature-item">
+            <div class="voting-feature-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 17H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-5l-5 5v-5z"/>
+              </svg>
+            </div>
+            <h4>线上线下结合</h4>
+            <p>支持电子投票和纸质投票同步进行，系统自动汇总结果</p>
+          </div>
+          <div class="voting-feature-item">
+            <div class="voting-feature-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                <polyline points="14 2 14 8 20 8"/>
+                <line x1="16" y1="13" x2="8" y2="13"/>
+                <line x1="16" y1="17" x2="8" y2="17"/>
+                <polyline points="10 9 9 9 8 9"/>
+              </svg>
+            </div>
+            <h4>自动公示归档</h4>
+            <p>自动生成投票公告、结果公示，支持文件下载打印张贴</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- CTA Section -->
     <section class="cta-section">
       <div class="container">
@@ -738,6 +891,361 @@ const testimonials = [
 .author-title {
   font-size: 14px;
   color: var(--text-tertiary);
+}
+
+/* Voting Solution Section */
+.voting-solution {
+  background: linear-gradient(135deg, var(--brand-50) 0%, var(--bg-primary) 50%, rgba(139, 92, 246, 0.05) 100%);
+}
+
+[data-theme="dark"] .voting-solution {
+  background: linear-gradient(135deg, rgba(30, 58, 95, 0.3) 0%, var(--bg-primary) 50%, rgba(139, 92, 246, 0.1) 100%);
+}
+
+.voting-solution .highlight {
+  background: linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.voting-showcase {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-16);
+  align-items: center;
+  margin-bottom: var(--space-16);
+}
+
+@media (max-width: 1024px) {
+  .voting-showcase {
+    grid-template-columns: 1fr;
+    gap: var(--space-10);
+  }
+}
+
+.voting-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  background: rgba(139, 92, 246, 0.1);
+  color: #8B5CF6;
+  font-size: 14px;
+  font-weight: 600;
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-full);
+  margin-bottom: var(--space-4);
+}
+
+[data-theme="dark"] .voting-badge {
+  background: rgba(139, 92, 246, 0.2);
+  color: #A78BFA;
+}
+
+.voting-title {
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--text-primary);
+  margin-bottom: var(--space-4);
+}
+
+@media (max-width: 768px) {
+  .voting-title {
+    font-size: 28px;
+  }
+}
+
+.voting-desc {
+  font-size: 18px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: var(--space-8);
+}
+
+.voting-stats {
+  display: flex;
+  gap: var(--space-8);
+  margin-bottom: var(--space-8);
+}
+
+@media (max-width: 640px) {
+  .voting-stats {
+    gap: var(--space-4);
+  }
+}
+
+.voting-stat-item {
+  text-align: center;
+}
+
+.voting-stat-number {
+  display: block;
+  font-size: 36px;
+  font-weight: 700;
+  color: #8B5CF6;
+  line-height: 1;
+}
+
+.voting-stat-label {
+  font-size: 14px;
+  color: var(--text-tertiary);
+  margin-top: var(--space-1);
+}
+
+.voting-visual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.phone-mockup {
+  width: 280px;
+  height: 560px;
+  background: var(--bg-primary);
+  border-radius: 40px;
+  padding: 12px;
+  box-shadow: var(--shadow-2xl), 0 0 60px rgba(139, 92, 246, 0.2);
+  border: 1px solid var(--border-color);
+}
+
+.phone-screen {
+  width: 100%;
+  height: 100%;
+  background: var(--bg-secondary);
+  border-radius: 32px;
+  overflow: hidden;
+}
+
+.vote-app {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.vote-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-4);
+  background: var(--bg-primary);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.vote-back, .vote-menu {
+  width: 24px;
+  height: 24px;
+  background: var(--bg-tertiary);
+  border-radius: var(--radius-md);
+}
+
+.vote-header span {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.vote-content {
+  flex: 1;
+  padding: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.vote-card {
+  background: var(--bg-primary);
+  border-radius: var(--radius-xl);
+  padding: var(--space-5);
+  border: 1px solid var(--border-color);
+}
+
+.vote-icon {
+  width: 56px;
+  height: 56px;
+  background: rgba(139, 92, 246, 0.1);
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-3);
+}
+
+.vote-card h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: var(--space-1);
+}
+
+.vote-card p {
+  font-size: 13px;
+  color: var(--text-tertiary);
+  margin-bottom: var(--space-3);
+}
+
+.vote-progress {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.vote-progress-bar {
+  flex: 1;
+  height: 6px;
+  background: var(--bg-tertiary);
+  border-radius: var(--radius-full);
+  position: relative;
+  overflow: hidden;
+}
+
+.vote-progress-bar::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 68%;
+  background: linear-gradient(90deg, #8B5CF6 0%, #EC4899 100%);
+  border-radius: var(--radius-full);
+}
+
+.vote-progress span {
+  font-size: 12px;
+  font-weight: 600;
+  color: #8B5CF6;
+}
+
+.face-id-demo {
+  background: linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  text-align: center;
+  color: white;
+}
+
+.face-ring {
+  width: 80px;
+  height: 80px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--space-3);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.05); opacity: 0.8; }
+}
+
+.face-icon {
+  opacity: 0.9;
+}
+
+.face-id-demo span {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.floating-card {
+  position: absolute;
+  background: var(--bg-primary);
+  border-radius: var(--radius-lg);
+  padding: var(--space-3) var(--space-4);
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.card-1 {
+  top: 20%;
+  right: 0;
+  animation-delay: 0s;
+}
+
+.card-2 {
+  bottom: 20%;
+  left: 0;
+  animation-delay: 1.5s;
+}
+
+@media (max-width: 1024px) {
+  .floating-card {
+    display: none;
+  }
+}
+
+.voting-features {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-6);
+}
+
+@media (max-width: 1024px) {
+  .voting-features {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .voting-features {
+    grid-template-columns: 1fr;
+  }
+}
+
+.voting-feature-item {
+  background: var(--bg-primary);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  border: 1px solid var(--border-color);
+  text-align: center;
+  transition: all var(--duration-normal);
+}
+
+.voting-feature-item:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(139, 92, 246, 0.3);
+}
+
+.voting-feature-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--space-4);
+}
+
+.voting-feature-item h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: var(--space-2);
+}
+
+.voting-feature-item p {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.6;
 }
 
 /* CTA Section */
